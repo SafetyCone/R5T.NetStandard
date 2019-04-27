@@ -1,0 +1,4 @@
+R5T.NetStandard.Construction - A construction console entry-point for the R5T.NetStandard library (A meta-package library for convenient aggregation of all R5T.NetStandard sub-packages that build only on base .NET Standard functionality.).
+
+Goals
+
