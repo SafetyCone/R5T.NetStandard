@@ -32,15 +32,6 @@ namespace R5T.NetStandard.Logging
             return output;
         }
 
-        /// <summary>
-        /// Gets the configuration key for the startup log file path value.
-        /// </summary>
-        public static string GetStartupLogFilePathConfigurationKey()
-        {
-            var output = ConfigurationPath.Combine(Constants.ConfigurationLoggingSectionPath, Constants.StartupLogFilePathKeyName);
-            return output;
-        }
-
         public static IEnumerable<string> GetCategoryNamePrefixes(string categoryName)
         {
             while (!string.IsNullOrEmpty(categoryName))

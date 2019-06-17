@@ -4,6 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+using R5T.NetStandard.Logging;
+using R5T.NetStandard.Startup;
+
+using LoggingConstants = R5T.NetStandard.Logging.Constants;
+
 
 namespace R5T.NetStandard
 {
@@ -82,7 +87,7 @@ namespace R5T.NetStandard
                     {
                         var startupOptions = startupConfigurationInstance.Configuration.Get<StartupOptions>();
 
-                        var startupLoggingConfigurationSection = startupConfigurationInstance.Configuration.GetSection(Constants.ConfigurationLoggingSectionKey);
+                        var startupLoggingConfigurationSection = startupConfigurationInstance.Configuration.GetSection(LoggingConstants.ConfigurationLoggingSectionKey);
                         if (!startupLoggingConfigurationSection.IsEmpty())
                         {
                             // Add startup logging configuration and providers.
@@ -253,11 +258,11 @@ namespace R5T.NetStandard
         public static IServiceCollection AddDefaultServices(this IServiceCollection services, ILogger logger)
         {
             services
-                .AddLogging(logger, (loggingBuilder, loggerInstance) =>
+                .AddLogging((loggingBuilder, loggerInstance) =>
                 {
                     loggingBuilder.AddLoggingConfigurationSection(loggerInstance);
                     loggingBuilder.AddSimpleConsole(loggerInstance); // Note! This works, just on a BS background thread so that you don't actually see the log output.
-                })
+                }, logger)
                 ;
 
             return services;

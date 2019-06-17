@@ -11,9 +11,6 @@ namespace R5T.NetStandard.Logging
 
         public const string ConfigurationLoggingSectionKey = @"Logging";
         public const string ConfigurationLoggingSectionPath = Constants.ConfigurationLoggingSectionKey;
-        public const string StartupConfigurationSectionKey = @"Startup";
         public const string LogFilePathKeyName = @"LogFilePath";
-        public const string StartupLogFilePathKeyName = @"StartupLogFilePath";
-        public const string StartupLogLevelKeyName = @"StartupLogLevel";
     }
 }
