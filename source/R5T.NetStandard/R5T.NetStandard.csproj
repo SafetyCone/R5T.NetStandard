@@ -6,9 +6,11 @@
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\R5T.NetStandard.Extensions\source\R5T.NetStandard.Extensions\R5T.NetStandard.Extensions.csproj" />
-    <ProjectReference Include="..\..\..\R5T.NetStandard.IO\source\R5T.NetStandard.IO\R5T.NetStandard.IO.csproj" />
-    <ProjectReference Include="..\..\..\R5T.NetStandard.OS\source\R5T.NetStandard.OS\R5T.NetStandard.OS.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.NetStandard.IO.Paths\source\R5T.NetStandard.IO.Paths\R5T.NetStandard.IO.Paths.csproj" />
     <ProjectReference Include="..\..\..\R5T.NetStandard.Types\source\R5T.NetStandard.Types\R5T.NetStandard.Types.csproj" />
   </ItemGroup>
 </Project>

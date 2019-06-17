@@ -1,4 +1,4 @@
-R5T.NetStandard - A meta-package library for convenient aggregation of all R5T.NetStandard sub-packages that build only on base .NET Standard functionality.
+R5T.NetStandard - A library for R5T.NetStandard functionality that depends only on base .NET Standard functionality and other libraries in the the R5T.NetStandard project namespace, but has not yet been broken off into its own sub-package.
 
 Goals
 
