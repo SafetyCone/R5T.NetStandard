@@ -5,6 +5,7 @@ using R5T.NetStandard.IO.Paths;
 using R5T.NetStandard.IO.Paths.Extensions;
 
 using PathUtilities = R5T.NetStandard.IO.Paths.Utilities;
+using PathUtilitiesExtra = R5T.NetStandard.IO.Paths.UtilitiesExtra;
 
 
 namespace R5T.NetStandard
@@ -26,7 +27,7 @@ namespace R5T.NetStandard
         {
             var defaultFileName = AppSettings.GetDefaultFileName();
 
-            var defaultFilePath = PathUtilities.RelativeToCurrentDirectory(defaultFileName);
+            var defaultFilePath = PathUtilitiesExtra.RelativeToCurrentDirectory(defaultFileName);
             return defaultFilePath;
         }
 
@@ -57,7 +58,7 @@ namespace R5T.NetStandard
         {
             var defaultFileName = AppSettings.GetDefaultFileNameForEnvironment(aspNetCoreEnvironment);
 
-            var defaultFilePath = PathUtilities.RelativeToCurrentDirectory(defaultFileName);
+            var defaultFilePath = PathUtilitiesExtra.RelativeToCurrentDirectory(defaultFileName);
             return defaultFilePath;
         }
 
@@ -77,7 +78,7 @@ namespace R5T.NetStandard
         {
             var defaultFileName = AppSettings.GetFileNameForEnvironment();
 
-            var defaultFilePath = PathUtilities.RelativeToCurrentDirectory(defaultFileName);
+            var defaultFilePath = PathUtilitiesExtra.RelativeToCurrentDirectory(defaultFileName);
             return defaultFilePath;
         }
 

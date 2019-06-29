@@ -4,7 +4,10 @@ using System.IO;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
+using R5T.NetStandard.IO;
+
 using PathUtilities = R5T.NetStandard.IO.Paths.Utilities;
+using PathUtilitiesExtra = R5T.NetStandard.IO.Paths.UtilitiesExtra;
 
 
 namespace R5T.NetStandard.Logging.SimplestFile
@@ -31,7 +34,7 @@ namespace R5T.NetStandard.Logging.SimplestFile
         {
             var rawLogFilePath = simplestFileLoggerOptionsOptions.Value.LogFilePath;
 
-            this.LogFilePath = PathUtilities.EnsureDirectorySeparator(rawLogFilePath);
+            this.LogFilePath = PathUtilitiesExtra.EnsureDirectorySeparator(rawLogFilePath);
 
             var overwrite = simplestFileLoggerOptionsOptions.Value.Overwrite;
             if (overwrite)
