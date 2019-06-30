@@ -14,7 +14,7 @@ namespace R5T.NetStandard.Startup
         /// </summary>
         public static string GetStartupLogFilePathConfigurationKey()
         {
-            var output = ConfigurationPath.Combine(LoggingConstants.ConfigurationLoggingSectionPath, Constants.StartupLogFilePathKeyName);
+            var output = ConfigurationPath.Combine((string)Logging.Constants.ConfigurationLoggingSectionPath, Constants.StartupLogFilePathKeyName);
             return output;
         }
     }
